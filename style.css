@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 10rem;
+  height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+#products {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+}
+
+body {
+  display: flex;
+}
+
+#logoAndBrand {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+#account {
+  margin-bottom: 5rem;
+}
+
+
+nav {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 8rem;
+}
+
+.card {
+  background: linear-gradient(rgb(249, 249, 255),rgb(158, 151, 177));
+  width: 68vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 1em;
+}
+
+.title {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.middle, .bottom{
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+.middle p {
+  width: 48%;
+  margin: 1em;
+}
+
+
+
+.card img {
+  width: 50%;
+  object-fit: contain;
+}
+.paginationBtn {
+  border: none;
+}
+
+.active {
+  background-color: rgb(135, 230, 251);
+}
+
+#pagination {
+  position: fixed;
+  display: flex;
+  gap: 1em;
+  bottom: 0;
+  background-color: rgb(212, 212, 212);
+  height: 2em;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.nom, .mdp {
+  margin-left: 10px;
+}
