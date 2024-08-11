@@ -3,7 +3,7 @@ const paginationZone = document.querySelector('#pagination')
 let nbByPage = 5;
 let actualPage = 1;
 
-const createCard = (articles) => {
+export const createCard = (articles) => {
     articles.forEach((article) => {
         const card = document.createElement("div");
         card.innerHTML = `
@@ -30,7 +30,7 @@ const displayCards = (results) => {
     createCard(productsToDisplay);
 };
 
-const createPagination = (results) => {
+export const createPagination = (results) => {
     console.log("---createPagination---");
     productsZone.innerHTML = ''
     paginationZone.innerHTML = '';

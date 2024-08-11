@@ -1,6 +1,7 @@
 //import { tryConnection } from "./connection"
+import { userId } from "./main"
 export const accountConnect = () => {
-    
+    console.log("début " + userId.mainId)
     let connectionZone = document.createElement("div")
         connectionZone.className = "connectionZone"
         connectionZone.style.position = "absolute"
@@ -49,7 +50,7 @@ export const accountConnect = () => {
                         unLock = true
                         connectionZone.remove()
                         //console.log("--" + user.id);
-                        mainId = user.id
+                        userId.mainId = user.id
                     }
                 })
                 if(unLock){
@@ -60,13 +61,14 @@ export const accountConnect = () => {
             })
             
             promise
-                .then((msg)=>{return msg})
+                .then((msg)=>{mainId = msg})
                 .catch((err) => {
                     console.error(err);
                 })
             
         }
     tryConnection(name, password)
-    console.log("tetet" + mainId);
+    console.log("fin " + userId.mainId);
     })
 }
+

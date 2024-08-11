@@ -1,6 +1,7 @@
 import { getProducts } from "./products"
 import { accountConnect } from "./account"
-
+import { createCart } from "./cart"
+import { userId } from "./main"
 
 const app=document.querySelector("#app")
 
@@ -62,5 +63,10 @@ export const createHeader = () => {
     elec.addEventListener("click", () => {
         console.log("Electronics products")
         getProducts("/category/electronics")})
+
+    cart.addEventListener('click', ()=>{
+        console.log("createCart");
+        createCart(userId.mainId)
+    })
 }
     
